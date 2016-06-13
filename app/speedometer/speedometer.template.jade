@@ -3,6 +3,7 @@
         p.username {{speedly.username}}
         a(href="#show" ng-click="showSettings($event)" title="Показать настройки").call-settngs
     .speedometer__img
+        ridge-speedometer(x-val="canvSpeed")
     .speedometer__field
         .field(ng-mousemove="move($event)" ng-class="{hide: !started}") Водить мышом здесь
             span.time {{time}}

@@ -23,6 +23,7 @@
                 speed = 0;
 
             scope.speed = 0;
+            scope.canvSpeed = 0;
             scope.username = speedlyCtrl.username;
             scope.started = false;
             scope.timer = null;
@@ -44,6 +45,8 @@
 
                 scope.started = true;
                 scope.speed = 0;
+
+                canvSpeed = 0;
 
                 scope.timer = $interval(function () {
                     if (scope.time > 0) {
@@ -80,6 +83,9 @@
                 if (at.x) {
                     distance += Math.sqrt(Math.pow(at.y - event.clientY, 2) + Math.pow(at.x - event.clientX, 2));
                     speed = Math.round(distance / speedlyCtrl.timeSelected.value);
+
+                    var canvSpeed = Math.sqrt(Math.pow(at.y - event.clientY, 2) + Math.pow(at.x - event.clientX, 2));
+                    scope.canvSpeed = canvSpeed;
                 }
 
                 at.x = event.clientX;
