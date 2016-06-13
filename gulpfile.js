@@ -31,18 +31,26 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', function () {
-    return gulp.src(['./app/**/*.js', './libs/**/*.js'])
-        .pipe(changed('./public/css'))
+    return gulp.src(['./app/**/*.js'])
+        .pipe(changed('./public'))
         .on('error', notify.onError())
-        .pipe(gulp.dest('./public/'))
+        .pipe(gulp.dest('./public'))
 });
 
-gulp.task('build', gulp.series('template', 'styles', 'scripts'));
+gulp.task('assets', function () {
+    return gulp.src(['./app/assets/**/*.*'])
+        .pipe(changed('./public/css'))
+        .on('error', notify.onError())
+        .pipe(gulp.dest('./public/assets'))
+});
+
+gulp.task('build', gulp.series('template', 'styles', 'scripts', 'assets'));
 
 gulp.task('watch', function () {
     gulp.watch('./app/**/*.jade', gulp.series('template'));
     gulp.watch('./app/**/*.scss', gulp.series('styles'));
     gulp.watch('./app/**/*.js', gulp.series('scripts'));
+    gulp.watch('./app/assets/**/*.*', gulp.series('assets'));
 });
 
 gulp.task('server', function () {
