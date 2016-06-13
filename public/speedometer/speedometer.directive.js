@@ -64,6 +64,8 @@
                 scope.started = false;
                 scope.speed = speed;
 
+                scope.canvSpeed = 0;
+
                 distance = 0;
                 speed = 0;
 
