@@ -1,0 +1,11 @@
+
+<div class="speedometer">
+  <div class="speedometer__top">
+    <p class="username">{{speedly.username}}</p><a href="#show" ng-click="showSettings($event)" title="Показать настройки" class="call-settngs"></a>
+  </div>
+  <div class="speedometer__img"></div>
+  <div class="speedometer__field">
+    <div ng-mousemove="move($event)" ng-class="{hide: !started}" class="field">Водить мышом здесь<span class="time">{{time}}</span></div><a href="#start" ng-click="startTimer($event)" ng-if="!started" class="btn">СТАРТ</a>
+  </div>
+</div>
+<results result="results"></results>

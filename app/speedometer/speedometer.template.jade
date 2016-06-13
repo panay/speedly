@@ -1,0 +1,11 @@
+.speedometer
+    .speedometer__top
+        p.username {{speedly.username}}
+        a(href="#show" ng-click="showSettings($event)" title="Показать настройки").call-settngs
+    .speedometer__img
+    .speedometer__field
+        .field(ng-mousemove="move($event)" ng-class="{hide: !started}") Водить мышом здесь
+            span.time {{time}}
+        a(href="#start" ng-click="startTimer($event)" ng-if="!started").btn СТАРТ
+
+results(result="results")

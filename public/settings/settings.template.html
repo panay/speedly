@@ -1,0 +1,21 @@
+
+<div ng-if="speedly.showed" class="settings">
+  <div class="settings__content">
+    <h1>Настройки</h1>
+    <form name="setting_form" id="setting-form" ng-submit="save()">
+      <fieldset>
+        <div>
+          <label for="time">Замерять каждые:</label>
+          <select id="time" name="time" ng-model="speedly.timeSelected" ng-options="time.name for time in speedly.times track by time.value"></select>
+        </div>
+        <div>
+          <label for="username">Имя пользователя:</label>
+          <input type="text" name="username" id="username" ng-model="speedly.username" required="required"/>
+        </div>
+        <div>
+          <input type="submit" value="OK" class="btn"/>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

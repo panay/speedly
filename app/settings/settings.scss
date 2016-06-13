@@ -1,0 +1,35 @@
+$c-black: #000;
+$c-white: #fff;
+$c-text: #222;
+
+.settings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($c-black, 0.35);
+    }
+
+    &__content {
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        background: $c-white;
+        color: $c-text;
+        width: 100%;
+        height: auto;
+        max-width: 50%;
+    }
+}

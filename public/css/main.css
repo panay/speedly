@@ -1,0 +1,86 @@
+.results {
+  max-width: 45%;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top; }
+  .results table {
+    width: 100%; }
+    .results table tr th {
+      text-align: left; }
+    .results table tr td {
+      border-bottom: 1px solid #b5b5b5;
+      padding: 5px; }
+
+.settings {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; }
+  .settings:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); }
+  .settings__content {
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    background: #fff;
+    color: #222;
+    width: 100%;
+    height: auto;
+    max-width: 50%; }
+
+.speedometer {
+  text-align: center;
+  border: 1px solid #b5b5b5;
+  width: 100%;
+  max-width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 45px; }
+  .speedometer__top p {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; }
+  .speedometer__top .call-settngs {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    background: url("../assets/img/settings.png") center no-repeat;
+    width: 16px;
+    height: 16px; }
+  .speedometer__field {
+    width: 80%;
+    height: 300px;
+    margin: 10px auto; }
+    .speedometer__field .field {
+      width: 100%;
+      height: 85%;
+      border: 1px solid #aaa;
+      color: #ccc;
+      position: relative; }
+      .speedometer__field .field.hide {
+        opacity: 0;
+        visibility: hidden; }
+      .speedometer__field .field .time {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ccc;
+        font-size: 50px;
+        z-index: 0; }
+    .speedometer__field .btn {
+      display: block;
+      width: 120px;
+      height: 30px;
+      line-height: 28px;
+      margin: 10px auto 0; }

@@ -1,0 +1,10 @@
+.results
+    table
+        thead
+            tr
+                th Пользователь
+                th Ср. скорость
+        tbody
+            tr(ng-repeat="res in result")
+                td {{res.username}}
+                td {{res.speed}} км/ч
