@@ -77,7 +77,7 @@
 
                 scope.results.push({
                     username: speedlyCtrl.username,
-                    speed: scope.speed
+                    speed: scope.speed.toFixed(4)
                 });
             };
 
@@ -86,8 +86,7 @@
                     distance += (((Math.sqrt(Math.pow(at.y - event.clientY, 2) + Math.pow(at.x - event.clientX, 2))) * 2.54 / 96) / 100) / 1000;
                     speed = distance / (parseInt(speedlyCtrl.timeSelected.value, 10) / 3600);
 
-                    var canvSpeed = Math.sqrt(Math.pow(at.y - event.clientY, 2) + Math.pow(at.x - event.clientX, 2));
-                    scope.canvSpeed = canvSpeed;
+                    scope.canvSpeed = speed;
                 }
 
                 at.x = event.clientX;
