@@ -84,7 +84,7 @@
             scope.move = function (event) {
                 if (at.x) {
                     distance += (((Math.sqrt(Math.pow(at.y - event.clientY, 2) + Math.pow(at.x - event.clientX, 2))) * 2.54 / 96) / 100) / 1000;
-                    speed = Math.round(distance / speedlyCtrl.timeSelected.value);
+                    speed = distance / (parseInt(speedlyCtrl.timeSelected.value, 10) / 3600);
 
                     var canvSpeed = Math.sqrt(Math.pow(at.y - event.clientY, 2) + Math.pow(at.x - event.clientX, 2));
                     scope.canvSpeed = canvSpeed;
