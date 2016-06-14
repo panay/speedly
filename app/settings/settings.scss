@@ -31,5 +31,10 @@ $c-text: #222;
         width: 100%;
         height: auto;
         max-width: 50%;
+        
+        form fieldset > div {
+            margin-top: 18px;
+        }
+        }
     }
 }
